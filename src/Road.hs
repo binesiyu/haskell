@@ -23,7 +23,9 @@ data Label = A | B | C deriving (Show)
 
 type Path = [(Label,Int)]
 
-roadStepA pathA pathB priceA priceB a b c =
+roadStepA,roadStepB :: (Path,Path,Int,Int) -> Section -> (Path,Int)
+
+roadStepA (pathA,pathB,priceA,priceB) (Section a b c) =
         let forwardPriceToA = priceA + a
             crossPriceToA = priceB + b + c
             (newPathToA,newPriceA) = if forwardPriceToA <= crossPriceToA
@@ -31,7 +33,7 @@ roadStepA pathA pathB priceA priceB a b c =
                              else ((C,c):(B,b):pathB,crossPriceToA)
         in (newPathToA,newPriceA)
 
-roadStepB pathA pathB priceA priceB a b c =
+roadStepB (pathA,pathB,priceA,priceB) (Section a b c) =
         let forwardPriceToB = priceB + b
             crossPriceToB = priceA + a + c
             (newPathToB,newPriceB) = if forwardPriceToB <= crossPriceToB
@@ -40,9 +42,9 @@ roadStepB pathA pathB priceA priceB a b c =
         in (newPathToB,newPriceB)
 
 roadStep :: (Path,Path,Int,Int) -> Section -> (Path,Path,Int,Int)
-roadStep (pathA,pathB,priceA,priceB) (Section a b c) =
-        let (newPathToA,newPriceA) = roadStepA pathA pathB priceA priceB a b c
-            (newPathToB,newPriceB)= roadStepB pathA pathB priceA priceB a b c
+roadStep path section =
+        let (newPathToA,newPriceA) = roadStepA path section
+            (newPathToB,newPriceB)= roadStepB path section
         in (newPathToA,newPathToB,newPriceA,newPriceB)
 
 optimalPath :: RoadSystem -> Path
