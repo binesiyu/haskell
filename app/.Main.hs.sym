@@ -1,0 +1,438 @@
+Prelude.ioError:: IOError -> IO a
+Prelude.<=:: Ord a => a -> a -> Bool
+unwords:: [String] -> String
+Prelude.break:: (a -> Bool) -> [a] -> ([a], [a])
+curry:: ((a, b) -> c) -> a -> b -> c
+getContents:: IO String
+Prelude.span:: (a -> Bool) -> [a] -> ([a], [a])
+Prelude.tanh:: Floating a => a -> a
+Prelude.encodeFloat:: RealFloat a => Integer -> Int -> a
+Prelude.negate:: Num a => a -> a
+Prelude.drop:: Int -> [a] -> [a]
+Prelude.mconcat:: Monoid a => [a] -> a
+readLn:: Read a => IO a
+Prelude.minBound:: Bounded a => a
+readFile:: FilePath -> IO String
+Prelude.even:: Integral a => a -> Bool
+Nothing:: Maybe a
+Prelude.either:: (a -> c) -> (b -> c) -> Either a b -> c
+Prelude.floor:: RealFrac a => forall b. Integral b => a -> b
+succ:: Enum a => a -> a
+return:: Monad m => forall a. a -> m a
+*:: Num a => a -> a -> a
++:: Num a => a -> a -> a
+-:: Num a => a -> a -> a
+.:: (b -> c) -> (a -> b) -> a -> c
+/:: Fractional a => a -> a -> a
+drop:: Int -> [a] -> [a]
+False:: Bool
+scaleFloat:: RealFloat a => Int -> a -> a
+Prelude.succ:: Enum a => a -> a
+reverse:: [a] -> [a]
+True:: Bool
+compare:: Ord a => a -> a -> Ordering
+<:: Ord a => a -> a -> Bool
+or:: Foldable t => t Bool -> Bool
+>:: Ord a => a -> a -> Bool
+all:: Foldable t => (a -> Bool) -> t a -> Bool
+recip:: Fractional a => a -> a
+Prelude.readParen:: Bool -> ReadS a -> ReadS a
+atan2:: RealFloat a => a -> a -> a
+Prelude.maybe:: b -> (a -> b) -> Maybe a -> b
+Right:: b -> Either a b
+==:: Eq a => a -> a -> Bool
+fromIntegral:: (Integral a, Num b) => a -> b
+zip3:: [a] -> [b] -> [c] -> [(a, b, c)]
+abs:: Num a => a -> a
+GT:: Ordering
+Prelude.or:: Foldable t => t Bool -> Bool
+Prelude.truncate:: RealFrac a => forall b. Integral b => a -> b
+^:: (Num a, Integral b) => a -> b -> a
+Prelude.interact:: (String -> String) -> IO ()
+a:: [Char]
+reads:: Read a => ReadS a
+exp:: Floating a => a -> a
+Prelude.atan:: Floating a => a -> a
+Prelude.==:: Eq a => a -> a -> Bool
+significand:: RealFloat a => a -> a
+minBound:: Bounded a => a
+toInteger:: Integral a => a -> Integer
+tanh:: Floating a => a -> a
+Prelude.GT:: Ordering
+Prelude.foldr1:: Foldable t => forall a. (a -> a -> a) -> t a -> a
+sequence_:: (Foldable t, Monad m) => t (m a) -> m ()
+otherwise:: Bool
+splitAt:: Int -> [a] -> ([a], [a])
+Prelude.traverse::Traversable t =>forall (f :: * -> *) a b.Applicative f =>(a -> f b) -> t a -> f (t b)
+atanh:: Floating a => a -> a
+errorWithoutStackTrace::forall (r :: GHC.Types.RuntimeRep) (a :: TYPE r). [Char] -> a
+atan:: Floating a => a -> a
+Prelude.readLn:: Read a => IO a
+Prelude.acos:: Floating a => a -> a
+Prelude.fmap:: Functor f => forall a b. (a -> b) -> f a -> f b
+Prelude.floatRadix:: RealFloat a => a -> Integer
+Prelude.null:: Foldable t => forall a. t a -> Bool
+mapM::Traversable t =>forall (m :: * -> *) a b. Monad m => (a -> m b) -> t a -> m (t b)
+Prelude.return:: Monad m => forall a. a -> m a
+Prelude.pi:: Floating a => a
+Prelude.True:: Bool
+Prelude.curry:: ((a, b) -> c) -> a -> b -> c
+Prelude.maximum:: Foldable t => forall a. Ord a => t a -> a
+map:: (a -> b) -> [a] -> [b]
+Prelude.ceiling:: RealFrac a => forall b. Integral b => a -> b
+Prelude.uncurry:: (a -> b -> c) -> (a, b) -> c
+acos:: Floating a => a -> a
+fmap:: Functor f => forall a b. (a -> b) -> f a -> f b
+null:: Foldable t => forall a. t a -> Bool
+appendFile:: FilePath -> String -> IO ()
+until:: (a -> Bool) -> (a -> a) -> a -> a
+>=:: Ord a => a -> a -> Bool
+>>:: Monad m => forall a b. m a -> m b -> m b
+Prelude.pure:: Applicative f => forall a. a -> f a
+**:: Floating a => a -> a -> a
+Prelude.putStr:: String -> IO ()
+Prelude.map:: (a -> b) -> [a] -> [b]
+notElem:: (Foldable t, Eq a) => a -> t a -> Bool
+readsPrec:: Read a => Int -> ReadS a
+traverse::Traversable t =>forall (f :: * -> *) a b.Applicative f =>(a -> f b) -> t a -> f (t b)
+Prelude.max:: Ord a => a -> a -> a
+mapM_:: (Foldable t, Monad m) => (a -> m b) -> t a -> m ()
+Main.a:: [Char]
+Prelude.>=:: Ord a => a -> a -> Bool
+Prelude.>>:: Monad m => forall a b. m a -> m b -> m b
+*>:: Applicative f => forall a b. f a -> f b -> f b
+Prelude.getContents:: IO String
+floatRadix:: RealFloat a => a -> Integer
+Prelude.sum:: Foldable t => forall a. Num a => t a -> a
+Prelude.atan2:: RealFloat a => a -> a -> a
+Prelude.asTypeOf:: a -> a -> a
+Prelude.**:: Floating a => a -> a -> a
+$::forall (r :: GHC.Types.RuntimeRep) a (b :: TYPE r).(a -> b) -> a -> b
+error::forall (r :: GHC.Types.RuntimeRep) (a :: TYPE r).GHC.Stack.Types.HasCallStack =>[Char] -> a
+divMod:: Integral a => a -> a -> (a, a)
+showParen:: Bool -> ShowS -> ShowS
+foldr1:: Foldable t => forall a. (a -> a -> a) -> t a -> a
+Prelude.putChar:: Char -> IO ()
+Prelude.*>:: Applicative f => forall a b. f a -> f b -> f b
+Prelude.snd:: (a, b) -> b
+Prelude.fst:: (a, b) -> a
+Prelude.reads:: Read a => ReadS a
+showsPrec:: Show a => Int -> a -> ShowS
+Prelude.errorWithoutStackTrace::forall (r :: GHC.Types.RuntimeRep) (a :: TYPE r). [Char] -> a
+and:: Foldable t => t Bool -> Bool
+iterate:: (a -> a) -> a -> [a]
+tan:: Floating a => a -> a
+Prelude.getChar:: IO Char
+putStr:: String -> IO ()
+Prelude.atanh:: Floating a => a -> a
+mempty:: Monoid a => a
+isNaN:: RealFloat a => a -> Bool
+filter:: (a -> Bool) -> [a] -> [a]
+Prelude.read:: Read a => String -> a
+any:: Foldable t => (a -> Bool) -> t a -> Bool
+fromRational:: Fractional a => Rational -> a
+Prelude.showString:: String -> ShowS
+++:: [a] -> [a] -> [a]
+asTypeOf:: a -> a -> a
+!!:: [a] -> Int -> a
+zipWith:: (a -> b -> c) -> [a] -> [b] -> [c]
+toEnum:: Enum a => Int -> a
+cos:: Floating a => a -> a
+Prelude.last:: [a] -> a
+Prelude.round:: RealFrac a => forall b. Integral b => a -> b
+read:: Read a => String -> a
+shows:: Show a => a -> ShowS
+Prelude.showParen:: Bool -> ShowS -> ShowS
+Prelude.++:: [a] -> [a] -> [a]
+min:: Ord a => a -> a -> a
+Prelude.!!:: [a] -> Int -> a
+Prelude.False:: Bool
+Prelude.=<<:: Monad m => (a -> m b) -> m a -> m b
+Prelude.Just:: a -> Maybe a
+last:: [a] -> a
+Prelude.divMod:: Integral a => a -> a -> (a, a)
+<$>:: Functor f => (a -> b) -> f a -> f b
+isDenormalized:: RealFloat a => a -> Bool
+Prelude.cycle:: [a] -> [a]
+Prelude.dropWhile:: (a -> Bool) -> [a] -> [a]
+const:: a -> b -> a
+subtract:: Num a => a -> a -> a
+Prelude.mapM_:: (Foldable t, Monad m) => (a -> m b) -> t a -> m ()
+Prelude.rem:: Integral a => a -> a -> a
+enumFromThen:: Enum a => a -> a -> [a]
+Prelude.zipWith3:: (a -> b -> c -> d) -> [a] -> [b] -> [c] -> [d]
+Just:: a -> Maybe a
+Prelude.init:: [a] -> [a]
+||:: Bool -> Bool -> Bool
+pure:: Applicative f => forall a. a -> f a
+Prelude.seq:: a -> b -> b
+Prelude.error::forall (r :: GHC.Types.RuntimeRep) (a :: TYPE r).GHC.Stack.Types.HasCallStack =>[Char] -> a
+quotRem:: Integral a => a -> a -> (a, a)
+Prelude.userError:: String -> IOError
+rem:: Integral a => a -> a -> a
+replicate:: Int -> a -> [a]
+^^:: (Fractional a, Integral b) => a -> b -> a
+even:: Integral a => a -> Bool
+Prelude.mempty:: Monoid a => a
+Prelude.cosh:: Floating a => a -> a
+Prelude.filter:: (a -> Bool) -> [a] -> [a]
+Prelude.fail:: Monad m => forall a. String -> m a
+init:: [a] -> [a]
+foldl:: Foldable t => forall b a. (b -> a -> b) -> b -> t a -> b
+scanr1:: (a -> a -> a) -> [a] -> [a]
+isInfinite:: RealFloat a => a -> Bool
+foldr:: Foldable t => forall a b. (a -> b -> b) -> b -> t a -> b
+Prelude.logBase:: Floating a => a -> a -> a
+Prelude.^^:: (Fractional a, Integral b) => a -> b -> a
+mappend:: Monoid a => a -> a -> a
+Prelude.toEnum:: Enum a => Int -> a
+Prelude.scanl:: (b -> a -> b) -> b -> [a] -> [b]
+cosh:: Floating a => a -> a
+Prelude.odd:: Integral a => a -> Bool
+Prelude.putStrLn:: String -> IO ()
+Prelude.scanr:: (a -> b -> b) -> b -> [a] -> [b]
+lines:: String -> [String]
+undefined::forall (r :: GHC.Types.RuntimeRep) (a :: TYPE r).GHC.Stack.Types.HasCallStack =>a
+snd:: (a, b) -> b
+fail:: Monad m => forall a. String -> m a
+Prelude.scaleFloat:: RealFloat a => Int -> a -> a
+Prelude.sequence::Traversable t =>forall (m :: * -> *) a. Monad m => t (m a) -> m (t a)
+Prelude.elem:: Foldable t => forall a. Eq a => a -> t a -> Bool
+show:: Show a => a -> String
+foldl1:: Foldable t => forall a. (a -> a -> a) -> t a -> a
+zipWith3:: (a -> b -> c -> d) -> [a] -> [b] -> [c] -> [d]
+Prelude.lcm:: Integral a => a -> a -> a
+Prelude.readsPrec:: Read a => Int -> ReadS a
+isIEEE:: RealFloat a => a -> Bool
+elem:: Foldable t => forall a. Eq a => a -> t a -> Bool
+Prelude.maxBound:: Bounded a => a
+ioError:: IOError -> IO a
+mconcat:: Monoid a => [a] -> a
+id:: a -> a
+concatMap:: Foldable t => (a -> [b]) -> t a -> [b]
+words:: String -> [String]
+Prelude.minimum:: Foldable t => forall a. Ord a => t a -> a
+fromInteger:: Num a => Integer -> a
+Prelude.repeat:: a -> [a]
+unzip:: [(a, b)] -> ([a], [b])
+putStrLn:: String -> IO ()
+Prelude.const:: a -> b -> a
+Prelude.>>=:: Monad m => forall a b. m a -> (a -> m b) -> m b
+Prelude.id:: a -> a
+main:: IO ()
+Prelude.zip:: [a] -> [b] -> [(a, b)]
+Prelude.sin:: Floating a => a -> a
+Prelude.Right:: b -> Either a b
+floatDigits:: RealFloat a => a -> Int
+Prelude.readList:: Read a => ReadS [a]
+Prelude.sequenceA::Traversable t =>forall (f :: * -> *) a. Applicative f => t (f a) -> f (t a)
+Prelude.enumFromThenTo:: Enum a => a -> a -> a -> [a]
+Prelude.product:: Foldable t => forall a. Num a => t a -> a
+sequenceA::Traversable t =>forall (f :: * -> *) a. Applicative f => t (f a) -> f (t a)
+Prelude.notElem:: (Foldable t, Eq a) => a -> t a -> Bool
+Prelude.isIEEE:: RealFloat a => a -> Bool
+Prelude.toInteger:: Integral a => a -> Integer
+foldMap::Foldable t => forall m a. Monoid m => (a -> m) -> t a -> m
+Prelude.sequence_:: (Foldable t, Monad m) => t (m a) -> m ()
+Prelude.foldl:: Foldable t => forall b a. (b -> a -> b) -> b -> t a -> b
+Prelude.foldl1:: Foldable t => forall a. (a -> a -> a) -> t a -> a
+Prelude.shows:: Show a => a -> ShowS
+Prelude.tail:: [a] -> [a]
+Prelude.foldr:: Foldable t => forall a b. (a -> b -> b) -> b -> t a -> b
+takeWhile:: (a -> Bool) -> [a] -> [a]
+scanl:: (b -> a -> b) -> b -> [a] -> [b]
+max:: Ord a => a -> a -> a
+Prelude.not:: Bool -> Bool
+Prelude.floatRange:: RealFloat a => a -> (Int, Int)
+Prelude.||:: Bool -> Bool -> Bool
+Prelude.significand:: RealFloat a => a -> a
+Prelude.words:: String -> [String]
+Prelude.unlines:: [String] -> String
+tail:: [a] -> [a]
+Prelude.sinh:: Floating a => a -> a
+Prelude.mod:: Integral a => a -> a -> a
+Prelude.unwords:: [String] -> String
+scanr:: (a -> b -> b) -> b -> [a] -> [b]
+Prelude.asin:: Floating a => a -> a
+signum:: Num a => a -> a
+fst:: (a, b) -> a
+maximum:: Foldable t => forall a. Ord a => t a -> a
+Prelude.iterate:: (a -> a) -> a -> [a]
+LT:: Ordering
+showList:: Show a => [a] -> ShowS
+Prelude.<*>:: Applicative f => forall a b. f (a -> b) -> f a -> f b
+cycle:: [a] -> [a]
+$!:: (a -> b) -> a -> b
+sinh:: Floating a => a -> a
+quot:: Integral a => a -> a -> a
+Prelude.Nothing:: Maybe a
+unzip3:: [(a, b, c)] -> ([a], [b], [c])
+Prelude.foldMap::Foldable t => forall m a. Monoid m => (a -> m) -> t a -> m
+Prelude.log:: Floating a => a -> a
+ceiling:: RealFrac a => forall b. Integral b => a -> b
+Prelude.gcd:: Integral a => a -> a -> a
+Prelude.appendFile:: FilePath -> String -> IO ()
+uncurry:: (a -> b -> c) -> (a, b) -> c
+floatRange:: RealFloat a => a -> (Int, Int)
+Prelude.$!:: (a -> b) -> a -> b
+Prelude.unzip:: [(a, b)] -> ([a], [b])
+Prelude.compare:: Ord a => a -> a -> Ordering
+Prelude.quotRem:: Integral a => a -> a -> (a, a)
+Prelude.acosh:: Floating a => a -> a
+Prelude.LT:: Ordering
+Prelude.lex:: ReadS String
+Prelude.lines:: String -> [String]
+Prelude.isNaN:: RealFloat a => a -> Bool
+Prelude.showsPrec:: Show a => Int -> a -> ShowS
+Prelude.zipWith:: (a -> b -> c) -> [a] -> [b] -> [c]
+Prelude.recip:: Fractional a => a -> a
+Prelude.reverse:: [a] -> [a]
+sin:: Floating a => a -> a
+=<<:: Monad m => (a -> m b) -> m a -> m b
+readList:: Read a => ReadS [a]
+Prelude.sqrt:: Floating a => a -> a
+decodeFloat:: RealFloat a => a -> (Integer, Int)
+Prelude.$::forall (r :: GHC.Types.RuntimeRep) a (b :: TYPE r).(a -> b) -> a -> b
+Prelude.fromInteger:: Num a => Integer -> a
+readParen:: Bool -> ReadS a -> ReadS a
+div:: Integral a => a -> a -> a
+Prelude.*:: Num a => a -> a -> a
+Prelude.+:: Num a => a -> a -> a
+Prelude.-:: Num a => a -> a -> a
+Prelude..:: (b -> c) -> (a -> b) -> a -> c
+Prelude./:: Fractional a => a -> a -> a
+Prelude.splitAt:: Int -> [a] -> ([a], [a])
+Prelude.signum:: Num a => a -> a
+putChar:: Char -> IO ()
+concat:: Foldable t => t [a] -> [a]
+Prelude.floatDigits:: RealFloat a => a -> Int
+lookup:: Eq a => a -> [(a, b)] -> Maybe b
+Prelude.<:: Ord a => a -> a -> Bool
+Prelude.>:: Ord a => a -> a -> Bool
+sqrt:: Floating a => a -> a
+Prelude.fromEnum:: Enum a => a -> Int
+seq:: a -> b -> b
+/=:: Eq a => a -> a -> Bool
+readIO:: Read a => String -> IO a
+getChar:: IO Char
+Prelude.show:: Show a => a -> String
+Prelude.fromIntegral:: (Integral a, Num b) => a -> b
+Prelude.subtract:: Num a => a -> a -> a
+Prelude.take:: Int -> [a] -> [a]
+Prelude.^:: (Num a, Integral b) => a -> b -> a
+Prelude.cos:: Floating a => a -> a
+length:: Foldable t => forall a. t a -> Int
+Prelude./=:: Eq a => a -> a -> Bool
+repeat:: a -> [a]
+Prelude.all:: Foldable t => (a -> Bool) -> t a -> Bool
+Prelude.otherwise:: Bool
+odd:: Integral a => a -> Bool
+Prelude.enumFrom:: Enum a => a -> [a]
+Prelude.head:: [a] -> a
+Prelude.readFile:: FilePath -> IO String
+maxBound:: Bounded a => a
+take:: Int -> [a] -> [a]
+Prelude.writeFile:: FilePath -> String -> IO ()
+Prelude.abs:: Num a => a -> a
+Prelude.showChar:: Char -> ShowS
+Prelude.enumFromTo:: Enum a => a -> a -> [a]
+lcm:: Integral a => a -> a -> a
+span:: (a -> Bool) -> [a] -> ([a], [a])
+showChar:: Char -> ShowS
+Prelude.exp:: Floating a => a -> a
+fromEnum:: Enum a => a -> Int
+head:: [a] -> a
+Prelude.zip3:: [a] -> [b] -> [c] -> [(a, b, c)]
+writeFile:: FilePath -> String -> IO ()
+showString:: String -> ShowS
+Prelude.concat:: Foldable t => t [a] -> [a]
+&&:: Bool -> Bool -> Bool
+Prelude.lookup:: Eq a => a -> [(a, b)] -> Maybe b
+scanl1:: (a -> a -> a) -> [a] -> [a]
+Prelude.unzip3:: [(a, b, c)] -> ([a], [b], [c])
+print:: Show a => a -> IO ()
+Prelude.asinh:: Floating a => a -> a
+Prelude.readIO:: Read a => String -> IO a
+enumFrom:: Enum a => a -> [a]
+Prelude.&&:: Bool -> Bool -> Bool
+Prelude.toRational:: Real a => a -> Rational
+>>=:: Monad m => forall a b. m a -> (a -> m b) -> m b
+Prelude.mapM::Traversable t =>forall (m :: * -> *) a b. Monad m => (a -> m b) -> t a -> m (t b)
+isNegativeZero:: RealFloat a => a -> Bool
+encodeFloat:: RealFloat a => Integer -> Int -> a
+Prelude.length:: Foldable t => forall a. t a -> Int
+Prelude.realToFrac:: (Real a, Fractional b) => a -> b
+sequence::Traversable t =>forall (m :: * -> *) a. Monad m => t (m a) -> m (t a)
+logBase:: Floating a => a -> a -> a
+Prelude.until:: (a -> Bool) -> (a -> a) -> a -> a
+round:: RealFrac a => forall b. Integral b => a -> b
+Prelude.isDenormalized:: RealFloat a => a -> Bool
+acosh:: Floating a => a -> a
+Prelude.exponent:: RealFloat a => a -> Int
+Prelude.decodeFloat:: RealFloat a => a -> (Integer, Int)
+Prelude.undefined::forall (r :: GHC.Types.RuntimeRep) (a :: TYPE r).GHC.Stack.Types.HasCallStack =>a
+Prelude.replicate:: Int -> a -> [a]
+Prelude.concatMap:: Foldable t => (a -> [b]) -> t a -> [b]
+Prelude.pred:: Enum a => a -> a
+break:: (a -> Bool) -> [a] -> ([a], [a])
+Prelude.getLine:: IO String
+not:: Bool -> Bool
+Left:: a -> Either a b
+toRational:: Real a => a -> Rational
+EQ:: Ordering
+Main.main:: IO ()
+pred:: Enum a => a -> a
+realToFrac:: (Real a, Fractional b) => a -> b
+mod:: Integral a => a -> a -> a
+Prelude.scanl1:: (a -> a -> a) -> [a] -> [a]
+floor:: RealFrac a => forall b. Integral b => a -> b
+pi:: Floating a => a
+getLine:: IO String
+Prelude.quot:: Integral a => a -> a -> a
+Prelude.fromRational:: Fractional a => Rational -> a
+Prelude.isInfinite:: RealFloat a => a -> Bool
+minimum:: Foldable t => forall a. Ord a => t a -> a
+Prelude.EQ:: Ordering
+Prelude.properFraction:: RealFrac a => forall b. Integral b => a -> (b, a)
+negate:: Num a => a -> a
+Prelude.and:: Foldable t => t Bool -> Bool
+zip:: [a] -> [b] -> [(a, b)]
+<*>:: Applicative f => forall a b. f (a -> b) -> f a -> f b
+asinh:: Floating a => a -> a
+Prelude.tan:: Floating a => a -> a
+enumFromTo:: Enum a => a -> a -> [a]
+interact:: (String -> String) -> IO ()
+Prelude.scanr1:: (a -> a -> a) -> [a] -> [a]
+exponent:: RealFloat a => a -> Int
+dropWhile:: (a -> Bool) -> [a] -> [a]
+Prelude.showList:: Show a => [a] -> ShowS
+either:: (a -> c) -> (b -> c) -> Either a b -> c
+maybe:: b -> (a -> b) -> Maybe a -> b
+Prelude.takeWhile:: (a -> Bool) -> [a] -> [a]
+log:: Floating a => a -> a
+Prelude.any:: Foldable t => (a -> Bool) -> t a -> Bool
+gcd:: Integral a => a -> a -> a
+Prelude.print:: Show a => a -> IO ()
+Prelude.mappend:: Monoid a => a -> a -> a
+product:: Foldable t => forall a. Num a => t a -> a
+Prelude.Left:: a -> Either a b
+<$:: Functor f => forall a b. a -> f b -> f a
+userError:: String -> IOError
+asin:: Floating a => a -> a
+Prelude.div:: Integral a => a -> a -> a
+<*:: Applicative f => forall a b. f a -> f b -> f a
+Prelude.flip:: (a -> b -> c) -> b -> a -> c
+lex:: ReadS String
+sum:: Foldable t => forall a. Num a => t a -> a
+Prelude.enumFromThen:: Enum a => a -> a -> [a]
+truncate:: RealFrac a => forall b. Integral b => a -> b
+properFraction:: RealFrac a => forall b. Integral b => a -> (b, a)
+Prelude.min:: Ord a => a -> a -> a
+<=:: Ord a => a -> a -> Bool
+Prelude.<$:: Functor f => forall a b. a -> f b -> f a
+Prelude.isNegativeZero:: RealFloat a => a -> Bool
+Prelude.<*:: Applicative f => forall a b. f a -> f b -> f a
+enumFromThenTo:: Enum a => a -> a -> a -> [a]
+Prelude.<$>:: Functor f => (a -> b) -> f a -> f b
+flip:: (a -> b -> c) -> b -> a -> c
+unlines:: [String] -> String
