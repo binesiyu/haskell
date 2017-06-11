@@ -5,6 +5,8 @@ module Rpn(
           ,testRPNFloat
           ) where
 
+import           Control.Monad
+import           Control.Monad.Writer
 import           Data.List
 
 solveRPN :: (Num a,Read a) => String -> a
@@ -31,3 +33,34 @@ solveRPN' = head . foldl foldingFunction [] . words
           foldingFunction xs numberString = read numberString:xs
 
 testRPNFloat = solveRPN' "2.7 ln"
+
+solveRPNSafe :: String -> Maybe Double
+solveRPNSafe st =  do
+        [result] <- foldM foldingFunctionSafe [] (words st)
+        return result
+
+readMaybe :: (Read a) => String -> Maybe a
+readMaybe st = case reads st of [(x,"")] -> Just x
+                                _        -> Nothing
+
+foldingFunctionSafe :: [Double] -> String -> Maybe [Double]
+foldingFunctionSafe (x:y:ys) "*"    = return ((x*y):ys)
+foldingFunctionSafe (x:y:ys) "+"    = return ((x+y):ys)
+foldingFunctionSafe (x:y:ys) "-"    = return ((y-x):ys)
+foldingFunctionSafe xs numberString = liftM (:xs) (readMaybe numberString)
+
+solveRPNLog ::  String -> Writer [String] [Double]
+solveRPNLog st = foldM foldingFunction [] ( words st)
+    where foldingFunction :: [Double] -> String -> Writer [String] [Double]
+          foldingFunction (x:y:ys) "*"    = do
+                                               tell [show x ++ " * "  ++ show y]
+                                               return ((x*y):ys)
+          foldingFunction (x:y:ys) "+"    = do
+                                               tell [show x ++ " + "  ++ show y]
+                                               return ((x+y):ys)
+          foldingFunction (x:y:ys) "-"    = do
+                                               tell [show x ++ " - "  ++ show y]
+                                               return ((y-x):ys)
+          foldingFunction xs numberString = do
+                                               tell ["read Num " ++ numberString]
+                                               return (read numberString:xs)
