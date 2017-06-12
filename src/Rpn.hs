@@ -6,6 +6,7 @@ module Rpn(
           ) where
 
 import           Control.Monad
+import           Control.Monad.Trans.Maybe
 import           Control.Monad.Writer
 import           Data.List
 
@@ -64,3 +65,19 @@ solveRPNLog st = foldM foldingFunction [] ( words st)
           foldingFunction xs numberString = do
                                                tell ["read Num " ++ numberString]
                                                return (read numberString:xs)
+
+solveRPNLogWithSafe ::  String -> WriterT [String] Maybe [Double]
+solveRPNLogWithSafe st = foldM foldingFunction [] ( words st)
+    where foldingFunction :: [Double] -> String -> WriterT [String] Maybe [Double]
+          foldingFunction (x:y:ys) "*"    = do
+                                               tell [show x ++ " * "  ++ show y]
+                                               return ((x*y):ys)
+          foldingFunction (x:y:ys) "+"    = do
+                                               tell [show x ++ " + "  ++ show y]
+                                               return ((x+y):ys)
+          foldingFunction (x:y:ys) "-"    = do
+                                               tell [show x ++ " - "  ++ show y]
+                                               return ((y-x):ys)
+          foldingFunction xs numberString = do
+                                               tell ["read Num " ++ numberString]
+                                               lift $ (:xs) <$> (readMaybe numberString)
